@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculate Total Bill</title>
 </head>
-<body>
-    <h1>Calculate Total Bill</h1>
-    
-    <label for="item1">Item 1 Price:</label>
-    <input type="number" id="item1" placeholder="Enter price of item 1"><br>
-    
-    <label for="item2">Item 2 Price:</label>
-    <input type="number" id="item2" placeholder="Enter price of item 2"><br>
-
-    <label for="discount">Discount (%) :</label>
-    <input type="number" id="discount" placeholder="Enter discount"><br>
-    
-    <button onclick="calculateBill()">Calculate Total</button>
-    <p id="result"></p>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; max-width: 400px; width: 100%;">
+        <h1 style="color: #333333; margin-bottom: 20px;">Calculate Total Bill</h1>
+        
+        <label for="item1" style="font-size: 18px; color: #333333;">Item 1 Price:</label>
+        <input type="number" id="item1" placeholder="Enter price of item 1" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <label for="item2" style="font-size: 18px; color: #333333;">Item 2 Price:</label>
+        <input type="number" id="item2" placeholder="Enter price of item 2" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <label for="discount" style="font-size: 18px; color: #333333;">Discount (%) :</label>
+        <input type="number" id="discount" placeholder="Enter discount" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <button onclick="calculateBill()" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Calculate Total</button>
+        <p id="result" style="margin-top: 20px; font-size: 18px; color: #333333;"></p>
+    </div>
 
     <script>
         function calculateBill() {

@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
 </head>
-<body>
-    <h1>Temperature Converter</h1>
-    
-    <label for="temperature">Enter Temperature:</label>
-    <input type="number" id="temperature" placeholder="Enter temperature"><br><br>
-    
-    <label for="conversion">Choose Conversion:</label>
-    <select id="conversion">
-        <option value="cToF">Celsius to Fahrenheit</option>
-        <option value="fToC">Fahrenheit to Celsius</option>
-    </select><br><br>
-    
-    <button onclick="convertTemperature()">Convert</button>
-    
-    <p id="result"></p>
-    
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; max-width: 400px; width: 100%;">
+        <h1 style="color: #333333; margin-bottom: 20px;">Temperature Converter</h1>
+        
+        <label for="temperature" style="font-size: 18px; color: #333333;">Enter Temperature:</label>
+        <input type="number" id="temperature" placeholder="Enter temperature" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <label for="conversion" style="font-size: 18px; color: #333333;">Choose Conversion:</label>
+        <select id="conversion" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;">
+            <option value="cToF">Celsius to Fahrenheit</option>
+            <option value="fToC">Fahrenheit to Celsius</option>
+        </select><br><br>
+        
+        <button onclick="convertTemperature()" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Convert</button>
+        
+        <p id="result" style="margin-top: 20px; font-size: 18px; color: #333333;"></p>
+    </div>
+
     <script>
         function convertTemperature() {
             const temperature = parseFloat(document.getElementById("temperature").value); // Get the input value

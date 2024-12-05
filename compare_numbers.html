@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compare Two Numbers</title>
 </head>
-<body>
-    <h1>Compare Two Numbers</h1>
-    
-    <label for="num1">Enter Number 1:</label>
-    <input type="number" id="num1" placeholder="Enter first number"><br>
-    
-    <label for="num2">Enter Number 2:</label>
-    <input type="number" id="num2" placeholder="Enter second number"><br>
-
-    <button onclick="compareNumbers()">Compare</button>
-    <p id="result"></p>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; max-width: 400px; width: 100%;">
+        <h1 style="color: #333333; margin-bottom: 20px;">Compare Two Numbers</h1>
+        
+        <label for="num1" style="font-size: 18px; color: #333333;">Enter Number 1:</label>
+        <input type="number" id="num1" placeholder="Enter first number" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <label for="num2" style="font-size: 18px; color: #333333;">Enter Number 2:</label>
+        <input type="number" id="num2" placeholder="Enter second number" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <button onclick="compareNumbers()" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Compare</button>
+        <p id="result" style="margin-top: 20px; font-size: 18px; color: #333333;"></p>
+    </div>
 
     <script>
         function compareNumbers() {

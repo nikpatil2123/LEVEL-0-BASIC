@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=], initial-scale=1.0">
-    <title>Document</title>
+    <title>Convert Minutes to Hours and Minutes</title>
 </head>
-<body>
-    <h1>Convert Minutes to Hours and Minutes</h1>
-    <label for="minutes">Enter Minutes:</label>
-    <input type="number" id="minutes" placeholder="Enter minutes">
-    <button onclick="convertTime()">Convert</button>
-    <p id="result"></p>
+<body style="font-family: Arial, sans-serif; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; max-width: 400px; width: 100%;">
+        <h1 style="color: #333333; margin-bottom: 20px;">Convert Minutes to Hours and Minutes</h1>
+        
+        <label for="minutes" style="font-size: 18px; color: #333333;">Enter Minutes:</label>
+        <input type="number" id="minutes" placeholder="Enter minutes" style="width: calc(100% - 20px); padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #dddddd;"><br><br>
+        
+        <button onclick="convertTime()" style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Convert</button>
+        <p id="result" style="margin-top: 20px; font-size: 18px; color: #333333;"></p>
+    </div>
 
     <script>
-        function convertTime(){
+        function convertTime() {
             const minutes = parseInt(document.getElementById("minutes").value);
             const hours = Math.floor(minutes / 60);
             const remainingMinutes = minutes % 60;
             document.getElementById("result").textContent = `${minutes} minutes is equal to ${hours} hours and ${remainingMinutes} minutes.`;
         }
-        
     </script>
 </body>
 </html>
