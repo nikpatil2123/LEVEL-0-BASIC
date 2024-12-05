@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Interpolation</h1>
+    <label for="name">Enter Your Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button onclick="displayGreeting()">Show Greeting</button>
+    <p id="result"></p>
+    <script>
+        function displayGreeting(){
+            const name = document.getElementById("name").value;
+            document.getElementById("result").textContent = `Hello ${name}! welcome to my website`;
+        }
+    </script>
+</body>
+</html>

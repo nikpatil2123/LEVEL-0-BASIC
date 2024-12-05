@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate Total Bill</title>
+</head>
+<body>
+    <h1>Calculate Total Bill</h1>
+    
+    <label for="item1">Item 1 Price:</label>
+    <input type="number" id="item1" placeholder="Enter price of item 1"><br>
+    
+    <label for="item2">Item 2 Price:</label>
+    <input type="number" id="item2" placeholder="Enter price of item 2"><br>
+
+    <label for="discount">Discount (%) :</label>
+    <input type="number" id="discount" placeholder="Enter discount"><br>
+    
+    <button onclick="calculateBill()">Calculate Total</button>
+    <p id="result"></p>
+
+    <script>
+        function calculateBill() {
+            const item1 = parseFloat(document.getElementById("item1").value);
+            const item2 = parseFloat(document.getElementById("item2").value);
+            const discount = parseFloat(document.getElementById("discount").value);
+
+            if (isNaN(item1) || isNaN(item2)) {
+                document.getElementById("result").textContent = "Please enter valid prices for both items.";
+                return;
+            }
+
+            let total = item1 + item2;
+            let totalAfterDiscount = total - (total * (discount / 100));
+            
+            document.getElementById("result").textContent = `Total Bill after ${discount}% discount is: $${totalAfterDiscount.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Check Data Type of a Value</h1>
+    <label for="value">Enter a Value:</label>
+    <input type="text" id="value" placeholder="Enter a value">
+    <button onclick="checkDataType()">Check Type</button>
+    <p id="result"></p>
+
+    <script>
+        function checkDataType() {
+            const value = document.getElementById("value").value;
+            let dataType;
+            if (!isNaN(parseFloat(value)) && isFinite(value)) {
+                dataType = "number";
+            } else if (value.toLowerCase() === "true" || value.toLowerCase() === "false") {
+                dataType = "boolean";
+            } else if (value.trim() === "") {
+                dataType = "undefined";
+            } else {
+                dataType = "string";
+            }
+            document.getElementById("result").textContent = `The data type of "${value}" is: ${dataType}`;
+        }
+    </script>
+</body>
+</html>
